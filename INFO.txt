@@ -1,0 +1,42 @@
++------------------------------------------------------------------------+
+|          Nanopass -  Minimalistic encrypted password storage           |
++------------------------------------------------------------------------+
+    
+    Minimalistic password manager with GUI and hierarchical search function.
+    Data is encrypted with AES256 and signed with a SHA3-HMAC.
+    Windows builds need Visual C build tools by Microsoft.
+    GTK+3.0 used, tested with version 3.18 and 3.14.
+    Install development headers with: apt install build-essential libgtk-3-dev
+    Icons by Yannick Lung (http://yannicklung.com/)
+    https://www.iconfinder.com/icons/314756/key_icon
+    https://www.iconfinder.com/icons/315201/document_locked_icon
+    https://www.iconfinder.com/icons/314700/combination_lock_icon
+    Icon C++ files generated using: xxd -i image.png > image.cpp
+    
++------------------------------------------------------------------------+
+    
+    File structure: .npw (Passwords database file) Version 1.0
+    | "NANOPASSDB"
+    | Major Version           - 1 Byte
+    | "."
+    | Minor Version           - 1 Byte
+    | Payload
+    
+    Payload Version 1.0
+    | Key Derivation Salt     - 32 Byte
+    | AES CTR IV              - 12 Byte
+    | HMAC of encrypted file  - 32 Byte
+    | Encrypted data length   -  4 Byte
+    | Encrypted data          - 0..2^32 Byte
+    
++------------------------------------------------------------------------+
+    TODO
+    
+    Allgemein
+        Leerstellen statt Tab führt zu Unsichtbarkeit
+        Singleline-Feld: 0 oder mehrere Leerstellen
+        Multiline-Feld kopieren: Letzte Newline weglassen beim Kopieren
+    GTK+3
+        Newline wird angezeigt in Singleline-Feld
+        Strg-Z funktioniert nicht
+    

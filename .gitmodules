@@ -1,0 +1,3 @@
+[submodule "src/tabtree"]
+	path = src/tabtree
+	url = ../tabtree/

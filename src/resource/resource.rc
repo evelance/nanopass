@@ -1,0 +1,39 @@
+#include "resource.h"
+#include "Windows.h"
+#ifndef IDC_STATIC
+#define IDC_STATIC -1
+#endif
+
+ID_APPICON ICON "key.ico"
+ID_DATABASE BITMAP "database.bmp"
+ID_LOCK BITMAP "lock.bmp"
+
+ID_MODALBOX DIALOGEX DISCARDABLE 0, 0, 50, 50
+STYLE DS_MODALFRAME | WS_SYSMENU | WS_CAPTION | WS_POPUP
+BEGIN
+END
+
+ID_ACCEL ACCELERATORS {
+    0x53,   ID_SAVE, VIRTKEY, CONTROL         // CTRL+S
+    VK_TAB, ID_FOCUS_SWITCH, VIRTKEY, CONTROL // CTRL+Tab
+    0x31,   ID_FOCUS_FILTER, VIRTKEY, ALT     // ALT+1
+    0x32,   ID_FOCUS_EDITOR, VIRTKEY, ALT     // ALT+2
+}
+
+1 VERSIONINFO
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription",  "Nanopass password manager\0"
+            VALUE "FileVersion",      "1.0\0"
+            VALUE "Comments",         "\0"
+            VALUE "LegalCopyright",   "\0"
+            VALUE "OriginalFilename", "\0"
+            VALUE "CompanyName",      "\0"
+            VALUE "ProductName",      "\0"
+            VALUE "ProductVersion",   "\0"
+        END
+    END
+END
