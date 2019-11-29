@@ -12,11 +12,14 @@ Install development headers with: `apt install build-essential libgtk-3-dev`
 Icons by Yannick Lung (http://yannicklung.com/)
 
 https://www.iconfinder.com/icons/314756/key_icon
-https://www.iconfinder.com/icons/315201/document_locked_icon
-https://www.iconfinder.com/icons/314700/combination_lock_icon
-Icon C++ files generated using: xxd -i image.png > image.cpp
 
-For more information, have a look at the homepage:
+https://www.iconfinder.com/icons/315201/document_locked_icon
+
+https://www.iconfinder.com/icons/314700/combination_lock_icon
+
+Icon C++ files generated using: `xxd -i image.png > image.cpp`
+
+For more information and the Windows binaries, have a look at the homepage:
 
 https://evelance.de/nanopass_password_manager/index.htm
 
